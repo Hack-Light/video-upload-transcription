@@ -36,11 +36,15 @@ const upload = multer({ storage: storage });
 app.post("/upload", upload.single("video"), uploadController);
 app.get("/get-video-url/:videoId", getUrlController);
 app.get("/get-transcript/:videoId", getVideoTranscriptController);
-app.get("/docs/http", (req, res)=>{
-  return res.redirect()
+app.get("/docs/http", (req, res) => {
+  return res.redirect(
+    "https://documenter.getpostman.com/view/27211809/2s9YJbzhAc"
+  );
 });
-app.get("/docs/ws", (req, res)=> {
-  return res.redirect
+app.get("/docs/ws", (req, res) => {
+  return res.redirect(
+    "https://res.cloudinary.com/hack-light/image/upload/v1696214694/Screenshot_2023-10-02_at_3.42.53_AM_unpvfg.png"
+  );
 });
 
 const videoChunks = {};
